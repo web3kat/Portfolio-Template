@@ -76,7 +76,7 @@ a:hover {
     -ms-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     border-radius: 5px;
-    box-shadow: 0px 3px 4px var(--main-theme-box-shadow-color);
+    box-shadow: 0px 3px 10px var(--main-theme-box-shadow-color);
     display: grid;
     height: 100%;
     transition: all 0.2s ease-in;
@@ -138,7 +138,7 @@ a:hover {
     }
 
     .card {
-        box-shadow: 0px 3px 4px var(--alternate-theme-box-shadow-color);
+        box-shadow: 0px 3px 10px var(--alternate-theme-box-shadow-color);
     }
 
     .card:hover {
