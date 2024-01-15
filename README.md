@@ -5,6 +5,9 @@
 
  <img src="https://github.com/katmohd/Portfolio-Template/assets/107350758/c20ae00e-6c50-4724-854f-e00932e96975" width="400"/>
 
+ <br />
+ <br />
+ 
  [Demo here](https://katmohd.github.io/Portfolio-Template/)
  
  * Made with vanilla HTML, CSS, and JavaScript. <br />
