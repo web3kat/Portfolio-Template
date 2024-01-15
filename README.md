@@ -1,6 +1,10 @@
 # Portfolio-Template
  Minimal responsive portfolio template that neatly displays projects
 
+ <img src="https://github.com/katmohd/Portfolio-Template/assets/107350758/d6edd9b6-4344-4c2e-9d78-52743c617152" width="400"/>
+
+ <img src="https://github.com/katmohd/Portfolio-Template/assets/107350758/c20ae00e-6c50-4724-854f-e00932e96975" width="400"/>
+
  [Demo here](https://katmohd.github.io/Portfolio-Template/)
  
  * Made with vanilla HTML, CSS, and JavaScript. <br />
