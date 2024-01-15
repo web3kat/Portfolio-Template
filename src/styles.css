@@ -93,10 +93,8 @@ a:hover {
 }
 
 .card .image-box {
-    align-self: center;
     border-radius: 5px;
     box-shadow: 0px 2px 15px var(--main-theme-box-shadow-color);
-    justify-self: center;
     margin: 0;
     overflow: hidden;
 }
