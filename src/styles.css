@@ -40,7 +40,7 @@ header {
 
 .themeButton:hover {
     background: var(--main-theme-secondary-color);
-    color: var(--main-theme-primary-color);
+    color: var(--main-theme-accent-color);
 }
 
 main {
@@ -160,7 +160,7 @@ a:hover {
 
 .alternate .themeButton:hover {
     background: var(--alternate-theme-secondary-color);
-    color: var(--alternate-theme-primary-color);
+    color: var(--alternate-theme-accent-color);
 }
 
 footer {
