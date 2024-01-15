@@ -7,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit title here</title>
     <style>
-        /* Change the colors for the background, font, button, and links. If the primary color is dark, you'll have to change all the box shadow colors manually. */
+        /* Change the colors for the background, font, button, links, and box shadows. */
         :root {
-            --primary-color: #ffffff;
-            --secondary-color: #000000;
-            --accent-color: #0000ff;
+            --main-theme-primary-color: #ffffff;
+            --main-theme-secondary-color: #000000;
+            --main-theme-accent-color: #0000ff;
+            --main-theme-box-shadow-color: rgba(0, 0, 0, 0.5);
+            --alternate-theme-primary-color: #000000;
+            --alternate-theme-secondary-color: #ffffff;
+            --alternate-theme-accent-color: #ff0000;
+            --alternate-theme-box-shadow-color: rgba(255, 255, 255, 0.5);
         }
 
         body {
-            background: var(--primary-color);
-            color: var(--secondary-color);
+            background: var(--main-theme-primary-color);
+            color: var(--main-theme-secondary-color);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             min-height: 100vh;
@@ -28,10 +33,10 @@
         }
 
         .themeButton {
-            background: var(--accent-color);
-            border: 1px solid var(--secondary-color);
+            background: var(--main-theme-accent-color);
+            border: 1px solid var(--main-theme-secondary-color);
             border-radius: 16px;
-            color: var(--secondary-color);
+            color: var(--main-theme-secondary-color);
             cursor: pointer;
             display: block;
             font-size: 10px;
@@ -42,41 +47,8 @@
         }
 
         .themeButton:hover {
-            background: var(--secondary-color);
-            color: var(--primary-color);
-        }
-
-        .dark {
-            background: var(--secondary-color);
-            color: var(--primary-color);
-
-            a:hover {
-                color: var(--primary-color);
-            }
-
-            .card {
-                box-shadow: 0px 3px 4px rgba(255, 255, 255, 0.4);
-            }
-
-            .card:hover {
-                box-shadow: 0px 15px 26px rgba(255, 255, 255, 0.5);
-            }
-
-            .card .image-box {
-                box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.5);
-            }
-        }
-
-        .dark .themeButton {
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            cursor: pointer;
-            transition: 150ms ease-in-out;
-        }
-
-        .dark .themeButton:hover {
-            background: var(--primary-color);
-            color: var(--secondary-color);
+            background: var(--alternate-theme-primary-color);
+            color: var(--alternate-theme-secondary-color);
         }
 
         main {
@@ -84,13 +56,13 @@
         }
 
         a {
-            color: var(--accent-color);
+            color: var(--main-theme-accent-color);
             font-weight: bold;
             text-decoration: underline;
         }
 
         a:hover {
-            color: var(--secondary-color);
+            color: var(--main-theme-secondary-color);
             text-decoration: none;
         }
 
@@ -112,7 +84,7 @@
             -ms-transition: all 0.2s ease-in;
             -o-transition: all 0.2s ease-in;
             border-radius: 5px;
-            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 3px 4px var(--main-theme-box-shadow-color);
             height: 100%;
             transition: all 0.2s ease-in;
             width: 100%;
@@ -123,13 +95,13 @@
             -moz-transition: all 0.2s ease-in;
             -ms-transition: all 0.2s ease-in;
             -o-transition: all 0.2s ease-in;
-            box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 15px 26px var(--main-theme-box-shadow-color);
             transition: all 0.2s ease-in;
         }
 
         .card .image-box {
             border-radius: 5px;
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 2px 15px var(--main-theme-box-shadow-color);
             margin: 0;
             overflow: hidden;
         }
@@ -153,6 +125,44 @@
 
         .card .card-body {
             padding: 10px;
+        }
+
+        .alternate {
+            background: var(--alternate-theme-primary-color);
+            color: var(--alternate-theme-secondary-color);
+
+            a {
+                color: var(--alternate-theme-accent-color);
+            }
+
+            a:hover {
+                color: var(--alternate-theme-secondary-color);
+            }
+
+            .card {
+                box-shadow: 0px 3px 4px var(--alternate-theme-box-shadow-color);
+            }
+
+            .card:hover {
+                box-shadow: 0px 15px 26px var(--alternate-theme-box-shadow-color);
+            }
+
+            .card .image-box {
+                box-shadow: 0px 2px 15px var(--alternate-theme-box-shadow-color);
+            }
+        }
+
+        .alternate .themeButton {
+            background: var(--alternate-theme-accent-color);
+            border: 1px solid var(--alternate-theme-secondary-color);
+            color: var(--alternate-theme-secondary-color);
+            cursor: pointer;
+            transition: 150ms ease-in-out;
+        }
+
+        .alternate .themeButton:hover {
+            background: var(--main-theme-primary-color);
+            color: var(--main-theme-secondary-color);
         }
 
         footer {
@@ -179,7 +189,7 @@
     <header>
         <h1>Title 1</h1>
         <h2><a href="https://javascript30.com/" target="_blank">Title 2</a></h2>
-        <button class="themeButton">Change theme</button>
+        <button class="themeButton">Change Theme</button>
     </header>
 
     <main>
@@ -280,10 +290,10 @@
         function changeTheme() {
             let body = document.querySelector("body");
 
-            if (body.classList.contains("dark")) {
-                body.classList.remove("dark");
+            if (body.classList.contains("alternate")) {
+                body.classList.remove("alternate");
             } else {
-                body.classList.add("dark");
+                body.classList.add("alternate");
             }
         }
 
