@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="add your own description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit title here</title>
+    <style>
+        /* Change the colors for the background, font, button, and links. If the primary color is dark, you'll have to change all the box shadow colors manually. */
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #000000;
+            --accent-color: #0000ff;
+        }
+
+        body {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            padding: 10px 20px;
+        }
+
+        .themeButton {
+            background: var(--accent-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 16px;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: block;
+            font-size: 10px;
+            font-weight: bold;
+            margin: 0 auto;
+            padding: 10px 20px;
+            transition: 150ms ease-in-out;
+        }
+
+        .themeButton:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        .dark {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+
+            a:hover {
+                color: var(--primary-color);
+            }
+
+            .card {
+                box-shadow: 0px 3px 4px rgba(255, 255, 255, 0.4);
+            }
+
+            .card:hover {
+                box-shadow: 0px 15px 26px rgba(255, 255, 255, 0.5);
+            }
+
+            .card .image-box {
+                box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .dark .themeButton {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: 150ms ease-in-out;
+        }
+
+        .dark .themeButton:hover {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        main {
+            padding: 50px 20px;
+        }
+
+        a {
+            color: var(--accent-color);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+        }
+
+        .project-item {
+            height: 94%;
+            margin: 3% 1%;
+            width: 96%;
+        }
+
+        .card {
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            -ms-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            border-radius: 5px;
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+            height: 100%;
+            transition: all 0.2s ease-in;
+            width: 100%;
+        }
+
+        .card:hover {
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            -ms-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+            transition: all 0.2s ease-in;
+        }
+
+        .card .image-box {
+            border-radius: 5px;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .card .image-box img {
+            -webkit-transition: all .9s ease;
+            -moz-transition: all .9s ease;
+            -o-transition: all .9s ease;
+            -ms-transition: all .9s ease;
+            border-radius: 5px;
+            vertical-align: middle;
+        }
+
+        .card:hover .image-box img {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .card .card-body {
+            padding: 10px;
+        }
+
+        footer {
+            align-self: end;
+            font-size: 10px;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .project-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .project-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Title 1</h1>
+        <h2><a href="https://javascript30.com/" target="_blank">Title 2</a></h2>
+        <button class="themeButton">Change theme</button>
+    </header>
+
+    <main>
+        <div class="project-container">
+            <div class="project-item">
+                <div class="card">
+                    <div class="image-box">
+                        <img src="./images/day1.webp" alt="edit alt" class="card-img-top" width="100%" height="100%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Edit title</h3>
+                        <p class="card-text"><a href="./01 - JavaScript Drum Kit/" target="_blank">Demo</a> | <a
+                                href="https://github.com/katmohd/JavaScript30/tree/main/01%20-%20JavaScript%20Drum%20Kit"
+                                target="_blank">Repo</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="card">
+                    <div class="image-box">
+                        <img src="./images/day2.webp" alt="edit alt" class="card-img-top" width="100%" height="100%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="./02 - JS and CSS Clock/" target="_blank">Edit title</a></h3>
+                        <p class="card-text">
+                            Edit text
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="card">
+                    <div class="image-box">
+                        <img src="./images/day3.webp" alt="edit alt" class="card-img-top" width="100%" height="100%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="./03 - CSS Variables/" target="_blank">Edit title</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <a href="./04 - Array Cardio Day 1/" target="_blank">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="./images/day4.webp" alt="edit alt" class="card-img-top" width="100%"
+                                height="100%">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Edit title</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="./05 - Flex Panel Gallery/" target="_blank">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="./images/day5.webp" alt="edit alt" class="card-img-top" width="100%"
+                                height="100%">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Edit title</h3>
+                            <p>Edit text</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-item">
+                <div class="card">
+                    <div class="image-box">
+                        <a href="./06 - Type Ahead/" target="_blank">
+                            <img src="./images/day6.webp" alt="edit alt" class="card-img-top" width="100%"
+                                height="100%">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Edit title</h3>
+                        <p class="card-text">
+                            <a href="./06 - Type Ahead/" target="_blank">Demo</a> | <a
+                                href="https://github.com/katmohd/JavaScript30/tree/main/06%20-%20Type%20Ahead"
+                                target="_blank">Repo
+                            </a>
+                        <p>Edit text</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Made by _yourname_ | <a href="" target="_blank">Link 1</a> | <a href="" target="_blank">Link 2</a> | <a href=""
+            target="_blank">Link 3</a>
+    </footer>
+
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        }
+
+        let themeButton = document.querySelector(".themeButton");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+
+</body>
+
+</html>
