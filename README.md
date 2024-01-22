@@ -8,7 +8,7 @@
  <br />
  <br />
  
- [Demo here](https://katmohd.github.io/Portfolio-Template/)
+ [Demo here](https://thewebkat.github.io/Portfolio-Template/)
  
  * Made with vanilla HTML, CSS, and JavaScript. <br />
  * Fully responsive for all devices. <br />
